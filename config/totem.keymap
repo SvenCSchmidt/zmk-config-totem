@@ -121,7 +121,7 @@
         };
 
         nav {
-            label = "nav";
+            label = "Nav";
             bindings = <
        &kp ESCAPE      &kp PRINTSCREEN  &kp UP_ARROW  &kp INSERT  &kp PAGE_UP      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4
        &kp HOME        &kp LEFT         &kp DOWN      &kp RIGHT   &kp END          &none         &kp RCTRL     &kp RSHFT     &kp LALT       &kp RGUI
@@ -131,7 +131,7 @@
         };
 
         num {
-            label = "num";
+            label = "Num";
             bindings = <
        &kp RS(N1)    &kp RS(N2)          &kp RS(N3)     &kp RS(N4)     &kp RS(N5)    &kp LS(N6)  &kp LS(N7)     &kp LS(N8)     &kp LS(N9)          &kp LS(N0)
        &bhm LGUI N1  &bhm LALT N2        &bhm LSHFT N3  &bhm LCTRL N4  &kp N5        &kp N6      &bhm LCTRL N7  &bhm RSHFT N8  &bhm LALT N9        &bhm RGUI N0
@@ -141,7 +141,7 @@
         };
 
         fun {
-            label = "fun";
+            label = "Fun";
             bindings = <
        &kp F1        &kp F2         &kp F3          &kp F4            &kp F5     &kp F6   &kp F7             &kp F8           &kp F9         &kp F10
        &kp LEFT_GUI  &kp LEFT_ALT   &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp F11    &kp F12  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp LEFT_ALT   &kp RIGHT_GUI
@@ -151,7 +151,7 @@
         };
 
         pad {
-            label = "pad";
+            label = "Pad";
             bindings = <
        &to 0   &none  &none  &none          &none        &kp SLASH  &kp N7  &kp N8  &kp N9  &kp MINUS
        &none   &none  &none  &none          &none        &kp STAR   &kp N4  &kp N5  &kp N6  &kp PLUS
