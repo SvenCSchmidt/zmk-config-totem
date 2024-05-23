@@ -110,7 +110,7 @@
            &kp Q        &kp W             &kp F              &kp P                &kp B          &kp J        &kp L                 &kp U               &kp Y                  &kp SEMI
            &bhm LGUI A  &bhm LEFT_ALT R   &bhm LEFT_SHIFT S  &bhm LEFT_CONTROL T  &kp G          &kp M        &bhm RIGHT_CONTROL N  &bhm RIGHT_SHIFT E  &bhm LEFT_ALT I        &bhm RIGHT_WIN O
 &kp MINUS  &kp Z        &bhm RIGHT_ALT X  &kp C              &kp D                &kp V          &kp K        &kp H                 &kp COMMA           &bhm RIGHT_ALT PERIOD  &kp FSLH          &kp BSLH
-                                          &lt ESC            &kp BSPC             &lt 1 ENTER    &lt 2 SPACE  &kp BSPC              &none
+                                          &kp ESC            &kp BSPC             &lt 1 ENTER    &lt 2 SPACE  &kp BSPC              &none
             >;
         };
 
@@ -147,10 +147,10 @@
         pad {
             label = "pad";
             bindings = <
-       &to 0   &none  &none  &none          &none        &kp SLASH  &kp N7  &kp N8  &kp N9  &kp MINUS
-       &none   &none  &none  &none          &none        &kp STAR   &kp N4  &kp N5  &kp N6  &kp PLUS
-&none  &none   &none  &none  &none          &none        &none      &kp N1  &kp N2  &kp N3  &none      &none
-                      &none  &kp BACKSPACE  &kp ENTER    &kp SPACE  &kp N0  &none
+       &to 0   &none  &none  &none          &none        &kp SLASH  &kp N7   &kp N8  &kp N9  &kp MINUS
+       &none   &none  &none  &none          &none        &kp STAR   &kp N4   &kp N5  &kp N6  &kp PLUS
+&none  &none   &none  &none  &none          &none        &kp N0     &kp N1   &kp N2  &kp N3  &none      &none
+                      &none  &kp BACKSPACE  &kp ENTER    &kp SPACE  &kp ESC  &none
             >;
         };
     };
