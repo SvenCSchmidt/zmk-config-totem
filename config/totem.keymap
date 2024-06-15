@@ -9,7 +9,7 @@
 //                                                                      ▀  ▀  ▀
 //
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-       
+
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -47,7 +47,7 @@
         };
     };
 };
- 
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -145,7 +145,7 @@
             bindings = <
                        &kp Q        &kp W        &kp F         &kp P         &kp B    &kp J        &kp L         &kp U         &kp Y          &kp SEMI
                        &hmg LGUI A  &hma LALT R  &bhm LSHFT S  &bhm LCTRL T  &kp G    &kp M        &bhm RCTRL N  &bhm RSHFT E  &hma LALT I    &hmg RGUI O
-            &kp minus  &kp Z        &hma RALT X  &kp C         &kp D         &kp V    &kp K        &kp H         &kp COMMA     &hma RALT DOT  &kp FSLH  &kp BSLH
+            &kp MINUS  &kp Z        &hma RALT X  &kp C         &kp D         &kp V    &kp K        &kp H         &kp COMMA     &hma RALT DOT  &kp FSLH  &kp BSLH
                                     &none        &none         &lt 1 RET              &lt 2 SPACE  &none         &none
             >;
         };
