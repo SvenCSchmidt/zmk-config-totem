@@ -87,28 +87,10 @@
             layers = <2>;
         };
 
-        Umlaut_A {
-            bindings = <&kp RA(Q)>;
-            key-positions = <1 2>;
-            layers = <0>;
-        };
-
-        Umlaut_S {
-            bindings = <&kp RA(S)>;
-            key-positions = <2 3>;
-            layers = <0>;
-        };
-
-        Umlaut_U {
-            bindings = <&kp RA(Y)>;
-            key-positions = <6 7>;
-            layers = <0>;
-        };
-
-        Umlaut_O {
-            bindings = <&kp RA(P)>;
-            key-positions = <7 8>;
-            layers = <0>;
+        Cmb_Grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <11 22>;
+            layers = <2>;
         };
 
         vUmlaut_A {
@@ -137,7 +119,7 @@
 
         Euro {
             bindings = <&kp RA(N5)>;
-            key-positions = <28 29>;
+            key-positions = <17 28>;
             layers = <0>;
         };
 
@@ -195,9 +177,15 @@
             layers = <0 1 2 3 4>;
         };
 
-        Cmb_CLCK {
+        Cmb_CLCKs {
             bindings = <&kp CLCK>;
             key-positions = <11 12 13>;
+            layers = <1>;
+        };
+
+        Cmb_CLCK {
+            bindings = <&kp CLCK>;
+            key-positions = <12 13 16 17>;
             layers = <1>;
         };
 
@@ -211,6 +199,30 @@
             bindings = <&kp RGUI>;
             key-positions = <19 30>;
             layers = <0 2>;
+        };
+
+        Cmb_LSFT {
+            bindings = <&kp LSHFT>;
+            key-positions = <12 13>;
+            layers = <0 2 3>;
+        };
+
+        Cmb_RSFT {
+            bindings = <&kp RSHFT>;
+            key-positions = <16 17>;
+            layers = <0 1 2 3>;
+        };
+
+        Cmb_WordLeft {
+            bindings = <&kp LC(LEFT)>;
+            key-positions = <11 12>;
+            layers = <1>;
+        };
+
+        Cmb_WordRight {
+            bindings = <&kp LC(RIGHT)>;
+            key-positions = <12 13>;
+            layers = <1>;
         };
     };
 
