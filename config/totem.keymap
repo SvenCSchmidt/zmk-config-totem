@@ -18,13 +18,24 @@
 
 / {
     behaviors {
-        bhm: balanced_homerow_mods {
+        hmlc: homerow_mod_lctrl {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "balanced";
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 26 27 28 29 30 31>;
+            bindings = <&kp>, <&kp>;
+        };
+        hmrc: homerow_mod_rctrl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25>;
             bindings = <&kp>, <&kp>;
         };
         hmls: homerow_mod_lshift {
@@ -41,7 +52,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <130>;
             quick-tap-ms = <0>;
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 25>;
@@ -221,6 +232,12 @@
 
         Cmb_Paste {
             bindings = <&kp LC(V)>;
+            key-positions = <21 22 23>;
+            layers = <0>;
+        };
+
+        Cmb_Paste_sm {
+            bindings = <&kp LC(V)>;
             key-positions = <23 25>;
             layers = <0>;
         };
@@ -238,10 +255,10 @@
         base {
             label = "base";
             bindings = <
-                       &kp Q  &kp W         &kp F          &kp P         &kp B        &kp J        &kp L         &kp U          &kp Y           &kp SEMI
-                       &kp A  &hmla LALT R  &hmls LSHFT S  &bhm LCTRL T  &kp G        &kp M        &bhm RCTRL N  &hmrs RSHFT E  &hmla LALT I    &kp O
-            &kp MINUS  &kp Z  &hmra RALT X  &kp C          &kp D         &kp V        &kp K        &kp H         &kp COMMA      &hmra RALT DOT  &kp FSLH  &kp BSLH
-                                            &none          &none         &lt 1 RET    &lt 2 SPACE  &none         &none
+                       &kp Q  &kp W         &kp F          &kp P          &kp B        &kp J        &kp L          &kp U          &kp Y           &kp SEMI
+                       &kp A  &hmla LALT R  &hmls LSHFT S  &hmlc LCTRL T  &kp G        &kp M        &hmrc RCTRL N  &hmrs RSHFT E  &hmla LALT I    &kp O
+            &kp MINUS  &kp Z  &hmra RALT X  &kp C          &kp D          &kp V        &kp K        &kp H          &kp COMMA      &hmra RALT DOT  &kp FSLH  &kp BSLH
+                                            &none          &none          &lt 1 RET    &lt 2 SPACE  &none          &none
             >;
         };
 
@@ -258,10 +275,10 @@
         num {
             label = "num";
             bindings = <
-                   &kp RS(N1)  &kp RS(N2)      &kp RS(N3)      &kp RS(N4)     &kp RS(N5)    &kp LS(N6)  &kp LS(N7)     &kp LS(N8)      &kp LS(N9)      &kp LS(N0)
-                   &kp N1      &hmla LALT N2   &hmls LSHFT N3  &bhm LCTRL N4  &kp N5        &kp N6      &bhm LCTRL N7  &hmrs RSHFT N8  &hmla LALT N9   &kp N0
-            &none  &kp MINUS   &hmra RALT SQT  &kp EQUAL       &kp LPAR       &kp LBKT      &kp RBKT    &kp RPAR       &kp COMMA       &hmra RALT DOT  &kp BSLH    &none
-                                               &none           &none          &tog 4        &none       &none          &none
+                   &kp RS(N1)  &kp RS(N2)      &kp RS(N3)      &kp RS(N4)      &kp RS(N5)    &kp LS(N6)  &kp LS(N7)      &kp LS(N8)      &kp LS(N9)      &kp LS(N0)
+                   &kp N1      &hmla LALT N2   &hmls LSHFT N3  &hmlc LCTRL N4  &kp N5        &kp N6      &hmrc LCTRL N7  &hmrs RSHFT N8  &hmla LALT N9   &kp N0
+            &none  &kp MINUS   &hmra RALT SQT  &kp EQUAL       &kp LPAR        &kp LBKT      &kp RBKT    &kp RPAR        &kp COMMA       &hmra RALT DOT  &kp BSLH    &none
+                                               &none           &none           &tog 4        &none       &none           &none
             >;
         };
 
