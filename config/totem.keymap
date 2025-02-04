@@ -123,7 +123,7 @@
         };
 
         Cmb_DQT {
-            bindings = <&kp RA(N5)>;
+            bindings = <&kp RSHFT(N2)>;
             key-positions = <1 11>;
             layers = <0>;
         };
