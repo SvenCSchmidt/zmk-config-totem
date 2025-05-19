@@ -16,6 +16,10 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS BSPC DEL>;
+};
+
 / {
     behaviors {
         hmlc: homerow_mod_lctrl {
@@ -89,6 +93,31 @@
 };
 
 / {
+    macros {
+        MCR_QUOTE: MCR_QUOTE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp SQT>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+
+        MCR_SCH: MCR_SCH {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <macro_tap &kp S>
+                , <macro_release &kp LSHIFT>
+                , <macro_release &kp RSHIFT>
+                , <macro_tap &kp C &kp H>
+                ;
+        };
+    };
+};
+
+/ {
     combos {
         compatible = "zmk,combos";
 
@@ -134,17 +163,17 @@
             layers = <2>;
         };
 
-        Cmb_LSFT {
-            bindings = <&kp LSHFT>;
-            key-positions = <12 13>;
-            layers = <0 2 3>;
-        };
+//        Cmb_LSFT {
+//            bindings = <&kp LSHFT>;
+//            key-positions = <12 13>;
+//            layers = <0 2 3>;
+//        };
 
-        Cmb_RSFT {
-            bindings = <&kp RSHFT>;
-            key-positions = <16 17>;
-            layers = <0 1 2 3>;
-        };
+//        Cmb_RSFT {
+//            bindings = <&kp RSHFT>;
+//            key-positions = <16 17>;
+//            layers = <0 1 2 3>;
+//        };
 
         Cmb_LGUI {
             bindings = <&kp LGUI>;
@@ -170,16 +199,22 @@
             layers = <0 1 2 4>;
         };
 
-        Cmb_CLCK {
-            bindings = <&kp CLCK>;
-            key-positions = <12 13 16 17>;
-            layers = <1>;
-        };
+//        Cmb_CLCK {
+//            bindings = <&kp CLCK>;
+//            key-positions = <12 13 16 17>;
+//            layers = <1>;
+//        };
 
         Cmb_CLCKs {
             bindings = <&kp CLCK>;
             key-positions = <11 12 13>;
             layers = <1>;
+        };
+
+        Cmb_CapsWord {
+            bindings = <&caps_word>;
+            key-positions = <12 17>;
+            layers = <0>;
         };
 
         Cmb_BSPC {
@@ -236,16 +271,63 @@
             layers = <0>;
         };
 
-        Cmb_Paste_sm {
-            bindings = <&kp LC(V)>;
-            key-positions = <23 25>;
-            layers = <0>;
-        };
+//        Cmb_Paste_sm {
+//            bindings = <&kp LC(V)>;
+//            key-positions = <23 25>;
+//            layers = <0>;
+//        };
 
         Cmb_Reset {
             bindings = <&bootloader>;
             key-positions = <11 12 13>;
             layers = <4>;
+        };
+
+        Cmb_LPAR {
+            bindings = <&kp LPAR>;
+            key-positions = <4 14>;
+            layers = <0>;
+        };
+
+        Cmb_RPAR {
+            bindings = <&kp RPAR>;
+            key-positions = <5 15>;
+            layers = <0>;
+        };
+
+        Cmb_LBKT {
+            bindings = <&kp LBKT>;
+            key-positions = <14 25>;
+            layers = <0>;
+        };
+
+        Cmb_RBKT {
+            bindings = <&kp RBKT>;
+            key-positions = <15 26>;
+            layers = <0>;
+        };
+
+        Cmb_MINUS {
+            bindings = <&kp MINUS>;
+            key-positions = <3 13>;
+            layers = <0>;
+        };
+
+        Cmb_EQUAL {
+            bindings = <&kp EQUAL>;
+            key-positions = <6 16>;
+            layers = <0>;
+        };
+
+        Cmb_MCR_QUOTE {
+            bindings = <&MCR_QUOTE>;
+            key-positions = <1 11>;
+            layers = <2>;
+        };
+
+        Cmb_MCR_SCH {
+            bindings = <&MCR_SCH>;
+            key-positions = <12 23>;
         };
     };
 
