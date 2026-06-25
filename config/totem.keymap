@@ -101,6 +101,7 @@
                 = <&macro_press &kp LSHFT>
                 , <&macro_tap &kp SQT>
                 , <&macro_release &kp LSHFT>
+                , <&macro_tap &kp SPACE>
                 ;
         };
 
@@ -354,6 +355,7 @@
         Cmb_MCR_SCH {
             bindings = <&MCR_SCH>;
             key-positions = <12 23>;
+            layers = <0>;
         };
 
         Cmb_MCR_DQT {
@@ -402,7 +404,7 @@
             label = "num";
             bindings = <
                    &kp RS(N1)   &kp RS(N2)      &kp RS(N3)      &kp RS(N4)      &kp RS(N5)    &kp LS(N6)  &kp LS(N7)      &kp LS(N8)      &kp LS(N9)      &kp LS(N0)
-                   &kp N1       &hmla LALT N2   &hmls LSHFT N3  &hmlc LCTRL N4  &kp N5        &kp N6      &hmrc LCTRL N7  &hmrs RSHFT N8  &hmla LALT N9   &kp N0
+                   &kp N1       &hmla LALT N2   &hmls LSHFT N3  &hmlc LCTRL N4  &kp N5        &kp N6      &hmrc RCTRL N7  &hmrs RSHFT N8  &hmla LALT N9   &kp N0
             &none  &MCR_DEGREE  &hmra RALT SQT  &kp BSPC        &kp DEL         &kp LBKT      &kp RBKT    &none           &kp COMMA       &hmra RALT DOT  &none       &none
                                                 &none           &none           &tog 4        &none       &none           &none
             >;
