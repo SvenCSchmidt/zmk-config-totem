@@ -94,7 +94,7 @@
 
 / {
     macros {
-        MCR_QUOTE: MCR_QUOTE {
+        MCR_DQT: MCR_DQT {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -112,6 +112,38 @@
                 , <&macro_release &kp LSHIFT>
                 , <&macro_release &kp RSHIFT>
                 , <&macro_tap &kp C &kp H>
+                ;
+        };
+
+        MCR_SQT: MCR_SQT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp SQT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+
+        MCR_TILDE: MCR_TILDE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RSHFT>
+                , <&macro_tap &kp GRAVE>
+                , <&macro_release &kp RSHFT>
+                , <&macro_tap &kp SPACE>
+                ;
+        };
+
+        MCR_DEGREE: MCR_DEGREE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp RALT>
+                , <&macro_press &kp LSHFT>
+                , <&macro_tap &kp SEMI>
+                , <&macro_release &kp RALT>
+                , <&macro_release &kp LSHFT>
                 ;
         };
     };
@@ -151,42 +183,6 @@
             layers = <0>;
         };
 
-        Cmb_DQT {
-            bindings = <&kp RSHFT(N2)>;
-            key-positions = <1 11>;
-            layers = <0>;
-        };
-
-        Cmb_Grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <11 22>;
-            layers = <2>;
-        };
-
-//        Cmb_LSFT {
-//            bindings = <&kp LSHFT>;
-//            key-positions = <12 13>;
-//            layers = <0 2 3>;
-//        };
-
-//        Cmb_RSFT {
-//            bindings = <&kp RSHFT>;
-//            key-positions = <16 17>;
-//            layers = <0 1 2 3>;
-//        };
-
-        Cmb_LGUI {
-            bindings = <&kp LGUI>;
-            key-positions = <10 21>;
-            layers = <0 2>;
-        };
-
-        Cmb_RGUI {
-            bindings = <&kp RGUI>;
-            key-positions = <19 30>;
-            layers = <0 2>;
-        };
-
         Cmb_ESC {
             bindings = <&kp ESC>;
             key-positions = <0 1>;
@@ -199,15 +195,9 @@
             layers = <0 1 2 4>;
         };
 
-//        Cmb_CLCK {
-//            bindings = <&kp CLCK>;
-//            key-positions = <12 13 16 17>;
-//            layers = <1>;
-//        };
-
         Cmb_CLCKs {
             bindings = <&kp CLCK>;
-            key-positions = <11 12 13>;
+            key-positions = <10 11 12 13>;
             layers = <1>;
         };
 
@@ -271,16 +261,28 @@
             layers = <0>;
         };
 
-//        Cmb_Paste_sm {
-//            bindings = <&kp LC(V)>;
-//            key-positions = <23 25>;
-//            layers = <0>;
-//        };
-
         Cmb_Reset {
             bindings = <&bootloader>;
             key-positions = <11 12 13>;
             layers = <4>;
+        };
+
+        Cmb_UNDO {
+            bindings = <&kp RC(Z)>;
+            key-positions = <2 3>;
+            layers = <0>;
+        };
+
+        Cmb_REDO {
+            bindings = <&kp LC(Y)>;
+            key-positions = <6 7>;
+            layers = <0>;
+        };
+
+        Cmb_ALL {
+            bindings = <&kp RC(A)>;
+            key-positions = <10 11>;
+            layers = <0>;
         };
 
         Cmb_LPAR {
@@ -307,6 +309,12 @@
             layers = <0>;
         };
 
+        Cmb_BSLH {
+            bindings = <&kp BSLH>;
+            key-positions = <19 30>;
+            layers = <0>;
+        };
+
         Cmb_MINUS {
             bindings = <&kp MINUS>;
             key-positions = <3 13>;
@@ -319,15 +327,51 @@
             layers = <0>;
         };
 
-        Cmb_MCR_QUOTE {
-            bindings = <&MCR_QUOTE>;
-            key-positions = <1 11>;
-            layers = <2>;
+        Cmb_UNDER {
+            bindings = <&kp LS(MINUS)>;
+            key-positions = <13 24>;
+            layers = <0>;
+        };
+
+        Cmb_PLUS {
+            bindings = <&kp LS(EQUAL)>;
+            key-positions = <16 27>;
+            layers = <0>;
+        };
+
+        Cmb_COLON {
+            bindings = <&kp LS(SEMI)>;
+            key-positions = <8 18>;
+            layers = <0>;
+        };
+
+        Cmb_PIPE {
+            bindings = <&kp LS(BSLH)>;
+            key-positions = <18 29>;
+            layers = <0>;
         };
 
         Cmb_MCR_SCH {
             bindings = <&MCR_SCH>;
             key-positions = <12 23>;
+        };
+
+        Cmb_MCR_DQT {
+            bindings = <&MCR_DQT>;
+            key-positions = <1 11>;
+            layers = <0>;
+        };
+
+        Cmb_MCR_TILDE {
+            bindings = <&MCR_TILDE>;
+            key-positions = <11 22>;
+            layers = <0 2>;
+        };
+
+        Cmb_MCR_SQT {
+            bindings = <&MCR_SQT>;
+            key-positions = <10 21>;
+            layers = <0 2>;
         };
     };
 
@@ -337,10 +381,10 @@
         base {
             label = "base";
             bindings = <
-                       &kp Q  &kp W         &kp F          &kp P          &kp B        &kp J        &kp L          &kp U          &kp Y           &kp SEMI
-                       &kp A  &hmla LALT R  &hmls LSHFT S  &hmlc LCTRL T  &kp G        &kp M        &hmrc RCTRL N  &hmrs RSHFT E  &hmla LALT I    &kp O
-            &kp MINUS  &kp Z  &hmra RALT X  &kp C          &kp D          &kp V        &kp K        &kp H          &kp COMMA      &hmra RALT DOT  &kp FSLH  &kp BSLH
-                                            &none          &none          &lt 1 RET    &lt 2 SPACE  &none          &none
+                   &kp Q        &kp W         &kp F          &kp P                 &kp B        &kp J        &kp L                 &kp U          &kp Y           &kp SEMI
+                   &hmg LGUI A  &hmla LALT R  &hmls LSHFT S  &hmlc LCTRL T         &kp G        &kp M        &hmrc RCTRL N         &hmrs RSHFT E  &hmla LALT I    &hmg RGUI O
+            &none  &kp Z        &hmra RALT X  &kp C          &kp D                 &kp V        &kp K        &kp H                 &kp COMMA      &hmra RALT DOT  &kp FSLH     &kp BSLH
+                                              &none          &mt LC(LS(LALT)) ESC  &lt 1 RET    &lt 2 SPACE  &mt LC(LS(LALT)) DEL  &none
             >;
         };
 
@@ -357,10 +401,10 @@
         num {
             label = "num";
             bindings = <
-                   &kp RS(N1)  &kp RS(N2)      &kp RS(N3)      &kp RS(N4)      &kp RS(N5)    &kp LS(N6)  &kp LS(N7)      &kp LS(N8)      &kp LS(N9)      &kp LS(N0)
-                   &kp N1      &hmla LALT N2   &hmls LSHFT N3  &hmlc LCTRL N4  &kp N5        &kp N6      &hmrc LCTRL N7  &hmrs RSHFT N8  &hmla LALT N9   &kp N0
-            &none  &kp MINUS   &hmra RALT SQT  &kp EQUAL       &kp LPAR        &kp LBKT      &kp RBKT    &kp RPAR        &kp COMMA       &hmra RALT DOT  &kp BSLH    &none
-                                               &none           &none           &tog 4        &none       &none           &none
+                   &kp RS(N1)   &kp RS(N2)      &kp RS(N3)      &kp RS(N4)      &kp RS(N5)    &kp LS(N6)  &kp LS(N7)      &kp LS(N8)      &kp LS(N9)      &kp LS(N0)
+                   &kp N1       &hmla LALT N2   &hmls LSHFT N3  &hmlc LCTRL N4  &kp N5        &kp N6      &hmrc LCTRL N7  &hmrs RSHFT N8  &hmla LALT N9   &kp N0
+            &none  &MCR_DEGREE  &hmra RALT SQT  &kp BSPC        &kp DEL         &kp LBKT      &kp RBKT    &none           &kp COMMA       &hmra RALT DOT  &none       &none
+                                                &none           &none           &tog 4        &none       &none           &none
             >;
         };
 
@@ -379,8 +423,8 @@
             bindings = <
 		           &to 0  &none  &none     &none    &none      &kp FSLH   &kp N7  &kp N8  &kp N9  &kp MINUS
                    &none  &none  &none     &none    &none      &kp STAR   &kp N4  &kp N5  &kp N6  &kp PLUS
-            &none  &none  &none  &kp BSPC  &kp DEL  &none      &kp N0     &kp N1  &kp N2  &kp N3  &none      &none
-                                 &none     &none    &kp RET    &kp SPACE  &none   &none 
+            &none  &none  &none  &kp BSPC  &kp DEL  &none      &kp DOT    &kp N1  &kp N2  &kp N3  &kp COMMA  &none
+                                 &none     &none    &kp RET    &kp SPACE  &kp N0  &none 
             >;
         };
     };
