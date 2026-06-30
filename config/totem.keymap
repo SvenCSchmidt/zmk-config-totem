@@ -387,7 +387,7 @@
             bindings = <
                    &kp Q        &kp W         &kp F          &kp P                 &kp B        &kp J        &kp L                 &kp U          &kp Y           &kp SEMI
                    &hmg LGUI A  &hmla LALT R  &hmls LSHFT S  &hmlc LCTRL T         &kp G        &kp M        &hmrc RCTRL N         &hmrs RSHFT E  &hmla LALT I    &hmg RGUI O
-            &none  &kp Z        &hmra RALT X  &kp C          &kp D                 &kp V        &kp K        &kp H                 &kp COMMA      &hmra RALT DOT  &kp FSLH     &kp BSLH
+            &none  &kp Z        &hmra RALT X  &kp C          &kp D                 &kp V        &kp K        &kp H                 &kp COMMA      &hmra RALT DOT  &kp FSLH     &none
                                               &none          &mt LC(LS(LALT)) ESC  &lt 1 RET    &lt 2 SPACE  &mt LC(LS(LALT)) DEL  &none
             >;
         };
